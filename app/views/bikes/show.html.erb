@@ -7,4 +7,5 @@
   <i class="fa fa-trash destroy_dose"> - Delete this bike listing</i> </p>
 <% end %>
 <br>
-<%= link_to "Return to bike list", bikes_path %>
+<p><%= link_to "Return to bike list", bikes_path, class:"btn btn-primary" %></p>
+<p><%= link_to "Buy this bike", bike_transactions_path(@bike), method: :post, class:"btn btn-primary" %></p>

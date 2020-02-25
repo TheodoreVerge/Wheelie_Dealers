@@ -1,0 +1,5 @@
+<h1>Transaction Confirmation Page</h1>
+
+<h2> Buyer = <%= @transaction.user.email %></h2>
+<h2> Seller = <%= @transaction.bike.user.email %></h2>
+<p> Bike info = <%= @transaction.bike.title %> | <%= @transaction.bike.description %> | <%= @transaction.bike.price %></p>
