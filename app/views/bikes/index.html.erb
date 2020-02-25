@@ -1,8 +1,10 @@
-<%= Bike.all %>
-
-
-<% @bikes.each do |bike| %>
-<%= bike.description %>
+<h1>🚲 Wheelie Dealers 🚲</h1>
+<ul><% @bikes.each do |bike| %>
+<li><%= link_to bike.title, bike_path(bike) %>
 <%= bike.price %>
-<%= bike.brand %>
+<%= bike.brand %></li>
 <% end %>
+<br>
+<br>
+<p><%=link_to "Add a new bike", new_bike_path%> </p>
+</ul>
