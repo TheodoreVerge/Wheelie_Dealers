@@ -9,10 +9,10 @@ puts "Cleaning db"
 p "."
 p ".."
 p "..."
-User.destroy_all
+# User.destroy_all
 
 puts "Creating users"
-user = User.create!(password: "123123", email: "test@gmail.com")
+user = User.create!(password: "123123", email: "test1@gmail.com")
 
 puts "Creating bikes"
 bike1 = Bike.create!(title: "Fixie", user: user, price: 200, description: "Sweet fixie, blue", brand: "Peugeot")

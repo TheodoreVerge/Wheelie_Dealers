@@ -2,9 +2,13 @@
 <p><%=@bike.description%></p>
 <p><%=@bike.price%></p>
 <p><%=@bike.brand%></p>
+<% @bike.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
 
 <p><%= link_to bike_path(@bike), method: :delete, data: { confirm: "Are you sure?" } do %>
   <i class="fa fa-trash destroy_dose"> - Delete this bike listing</i> </p>
 <% end %>
 <br>
-<%= link_to "Return to bike list", bikes_path %>
+<p><%= link_to "Return to bike list", bikes_path, class:"btn btn-primary" %></p>
+<p><%= link_to "Buy this bike", bike_transactions_path(@bike), method: :post, class:"btn btn-primary" %></p>
