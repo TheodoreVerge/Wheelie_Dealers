@@ -7,7 +7,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  // top: -50px;
 }
+
+
 
 .container {
   width: 100%;
@@ -18,7 +21,7 @@
 
 
 .form{
-  width:350px;
+  width:400px;
   height:300px;
   background-color: none;
   border-radius:8px;
@@ -27,8 +30,8 @@
   padding:20px 30px;
   box-sizing: border-box;
   position: absolute;
-  left: 50px;
-  top: 20px;
+  // left: 5px;
+  top: -100px;
   // opacity: 0.8;
   }
 
