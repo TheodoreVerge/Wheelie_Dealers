@@ -1,6 +1,10 @@
-<h1><%=@bike.title%></h1>
+<p><%=@bike.title%></p>
 <p><%=@bike.description%></p>
 <p><%=@bike.price%></p>
 <p><%=@bike.brand%></p>
 
-<%= link_to bikes_path %>
+<p><%= link_to bike_path(@bike), method: :delete, data: { confirm: "Are you sure?" } do %>
+  <i class="fa fa-trash destroy_dose"> - Delete this bike listing</i> </p>
+<% end %>
+<br>
+<%= link_to "Return to bike list", bikes_path %>
