@@ -11,6 +11,16 @@
   transform: translateY(-85px);
 }
 
+.main-header {
+  font-family: 'Pacifico';
+  text-align: center;
+  color: $orange;
+  letter-spacing: 5px;
+  position: absolute;
+  top:200px;
+  left: 550px;
+}
+
 .container {
   width: 100%;
   padding-top: 40px;
@@ -34,12 +44,7 @@
   // opacity: 0.8;
   }
 
-  h1 {
-    // color: #ccc;
-    text-align: center;
-    font-family: 'Vibur', cursive;
-    font-size: 40px;
-  }
+
 
   .submit_button {
     background-color: $orange;
@@ -49,7 +54,12 @@
 
   .sell_bike {
     position: absolute;
-    bottom: 120px;
+    bottom: 200px;
+    left: 55px;
+    width: 340px;
+    border-radius: 2px;
+    // opacity: 0.8;
+    background-color: $orange;
   }
 // h2{margin:10px 0;padding-bottom:10px;width:180px;color:#78788c;border-bottom:3px solid #78788c}
 // input{width:100%;padding:10px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #bebed2}
