@@ -1,4 +1,12 @@
+<div class="card">
+
+  <!-- Card body -->
+  <div class="card-body">
+
 <h1>Put your bike for sale</h1>
+
+<div class="md-form">
+
 <%= simple_form_for(@bike) do |f|%>
 <%= f.input :title %>
 <%= f.input :description %>
@@ -7,3 +15,6 @@
 <%= f.input :photos, as: :file, input_html: { multiple: true }%>
 <%= f.submit "Sell it", class: "btn btn-primary" %>
 <% end %>
+</div>
+</div>
+</div>
