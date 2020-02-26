@@ -1,9 +1,9 @@
 
-<div class="card-product">
+<div class="card-product col-6">
+  <%= cl_image_tag current_user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%>
   <div class="card-product-infos">
     <h1>Your Profile Page</h1>
     <h2><%= current_user.first_name %> - <%= current_user.last_name %></h2>
     <p><%= current_user.email %></p>
   </div>
-  <%= cl_image_tag current_user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%>
 </div>
