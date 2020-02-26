@@ -2,17 +2,19 @@
 .background_img {
   background-image: url('background.jpg');
   background-color: #cccccc;
-  height: 630px;
+  height: 105vh;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  transform: translateY(-85px);
 }
 
 .container {
   width: 100%;
-  padding-top: 60px;
-  padding-bottom: 100px;
+  padding-top: 40px;
+  // padding-bottom: 100px;
   // border: 1px solid black;
 }
 
@@ -40,9 +42,14 @@
   }
 
   .submit_button {
-    background-color: #FE9A51;
+    background-color: $orange;
     letter-spacing: 2px;
 
+  }
+
+  .sell_bike {
+    position: absolute;
+    bottom: 120px;
   }
 // h2{margin:10px 0;padding-bottom:10px;width:180px;color:#78788c;border-bottom:3px solid #78788c}
 // input{width:100%;padding:10px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #bebed2}

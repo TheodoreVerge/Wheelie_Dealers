@@ -1,7 +1,7 @@
 class BikesController < ApplicationController
 
   def index
-  raise
+
   @bikes = Bike.all
   end
 
