@@ -1,6 +1,38 @@
-.basic_form {
-  box-shadow: 8px 8px 3px 0px rgba(186,186,186,1);
-  padding: 36px;
-  margin: 16px;
-  background-color: white;
+// .basic_form {
+//   box-shadow: 8px 8px 3px 0px rgba(186,186,186,1);
+//   padding: 36px;
+//   margin: 16px;
+//   background-color: white;
+// }
+
+.body_form {
+  // background-color: white;
+  padding: 10px;
+  // background: linear-gradient(rgba(249, 119, 76,.75));
 }
+.basic_form {
+  max-width: 30rem;
+  margin: 30px auto;
+  padding: 1.5rem 2rem;
+  background-color: $orange;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+}
+
+.basic_form h1 {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gray-lighter);
+  font-size: var(--font-size-3);
+  text-align: center;
+  text-decoration: underline;
+}
+
+.input {
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 0.75rem;
+ }
+
+
