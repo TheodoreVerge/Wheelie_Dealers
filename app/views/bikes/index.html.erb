@@ -1,10 +1,30 @@
-<h1>🚲 Wheelie Dealers 🚲</h1>
-<ul><% @bikes.each do |bike| %>
-<li><%= link_to bike.title, bike_path(bike) %>
-<%= bike.price %>
-<%= bike.brand %></li>
-<% end %>
-<br>
-<br>
-<p><%=link_to "Add a new bike", new_bike_path%> </p>
-</ul>
+<div class="container">
+  <% @bikes.each do |bike|%>
+    <div class="bike-card">
+      <div>
+        <% if bike.photos.any? %>
+          <%= cl_image_tag bike.photos.first.keys, height: 300, width: 300, crop: :fill, class: "img-style" %></div>
+
+        <% end %>
+        <div class="card-center">
+          <div>
+            <h4><%= bike.title %></h4>
+          </div>
+          <div>
+            <p class="card-text"></p>
+            <p><%= bike.description %></p>
+
+          </div>
+          <div>
+           <p> <%#= link_to "Find more details", bike_path(@bike), class:"btn btn-primary" %></p>
+          </div>
+        </div>
+        <div class="price-container">
+          <div> <%= image_tag "avatar.png", :class => "avatar" %> </div>
+          <div class="price"><%= bike.price %></div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
