@@ -1,10 +1,64 @@
-<h1>🚲 Wheelie Dealers 🚲</h1>
-<ul><% @bikes.each do |bike| %>
-<li><%= link_to bike.title, bike_path(bike) %>
-<%= bike.price %>
-<%= bike.brand %></li>
-<% end %>
-<br>
-<br>
-<p><%=link_to "Add a new bike", new_bike_path%> </p>
-</ul>
+<div class="container">
+  <div class="bike-card">
+    <div><%= image_tag "pennyfarthing.png", :class => "img-style" %></div>
+      <div class="card-center">
+        <div>
+          <h4>Original Penny Farthing!</h3>
+        </div>
+        <div>
+          <p class="card-text">This classic bike has only been used a couple of times and is in excellent condition. Any question please be in touch!</p>
+        </div>
+        <div>
+          <p><%= link_to "Buy this bike", bike_transactions_path(@bike), method: :post, class:"btn btn-primary" %></p>
+        </div>
+      </div>
+      <div class="price-container">
+        <div> <%= image_tag "avatar.png", :class => "avatar" %> </div>
+        <div class="price">£300.00</div>
+      </div>
+  </div>
+
+  <div class="bike-card">
+    <div><%= image_tag "schwinn.png", :class => "img-style" %></div>
+    <div class="card-center">
+      <div>
+        <h4>Sky Blue Women's Schwinn Bike</h4>
+      </div>
+      <div class="card-text">
+        <p>Schwinn lives up to its reputation of making quality and world-class road bikes that also happen to be reliable.</p>
+      </div>
+      <div>
+          <a cl href="#" class="btn btn-primary card-button">Buy now</a>
+      </div>
+    </div>
+    <div class="price-container">
+      <div> <%= image_tag "avatar.png", :class => "avatar" %> </div>
+      <div class="price">£145.00</div>
+    </div>
+  </div>
+
+  <div class="bike-card">
+    <div><%= image_tag "voodoo.png", :class => "img-style" %></div>
+    <div class="card-center">
+      <div>
+        <h4>Voodoo Nzumbi Mountain Bike</h4>
+      </div>
+      <div class="card-text">
+        <p>The Voodoo Nzumbi 26" Mountain Bike is a great bike for kids looking to hit tracks and trails at the weekend.</p>
+      </div>
+      <div>
+          <a cl href="#" class="btn btn-primary card-button">Buy now</a>
+      </div>
+    </div>
+    <div class="price-container">
+      <div> <%= image_tag "avatar.png", :class => "avatar" %> </div>
+      <div class="price">£145.00</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

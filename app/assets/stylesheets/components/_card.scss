@@ -1,0 +1,42 @@
+.bike-card {
+  display: flex;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  margin: 20px 10px 20px 20px;
+  padding: 20px;
+  max-width: 600px;
+  max-height: 300px;
+}
+
+.card-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  max-width: 300px;
+  padding: 10px;
+}
+
+.img-style {
+  width: 250px;
+  max-height: 200px;
+}
+
+.price {
+  padding: 3px;
+}
+
+.card-button {
+  text-align: center;
+  background-color: $orange;
+  border: 0px solid black;
+  margin: 6px auto;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
