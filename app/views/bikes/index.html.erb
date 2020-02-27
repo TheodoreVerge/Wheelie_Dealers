@@ -1,10 +1,18 @@
-<h1>🚲 Wheelie Dealers 🚲</h1>
-<ul><% @bikes.each do |bike| %>
-<li><%= link_to bike.title, bike_path(bike) %>
-<%= bike.price %>
-<%= bike.brand %></li>
-<% end %>
-<br>
-<br>
-<p><%=link_to "Add a new bike", new_bike_path%> </p>
-</ul>
+
+<div class="card mb-6 col-md-6 card_design">
+  <div class="row no-gutters">
+    <img src="..." class="card-img col-md-4" alt="...">
+    <div class="col-8 bike_details d-flex p-3 card-body">
+      <div class=" bike_info flex-grow">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+      <div class="price_avatar d-flex align-items-end">
+        <%= image_tag "avatar.png", :class => "card_avatar ", alt: "alttext" %>
+        <h2 class="card-trip-pricing">£99.99</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
