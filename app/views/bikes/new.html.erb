@@ -6,8 +6,10 @@
       <%= f.input :description, input_html: { class: 'input' } %>
       <%= f.input :price, input_html: { class: 'input' } %>
       <%= f.input :brand, input_html: { class: 'input' } %>
+      <%= f.input :address %>
       <%= f.input :photos, as: :file, input_html: { multiple: true }%>
       <%= f.submit "List it!", class: "btn btn-block submit_button" %>
       <% end %>
   </div>
+</div>
 
