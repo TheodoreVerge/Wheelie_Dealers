@@ -1,12 +1,13 @@
 class BikesController < ApplicationController
 
-  def index
+ def index
     @bikes = Bike.geocoded
 
     @markers = @bikes.map do |bike|
       {
         lat: bike.latitude,
-        lng: bike.longitude
+        lng: bike.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { bike: bike })
       }
     end
   end
