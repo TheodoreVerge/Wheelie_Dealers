@@ -1,0 +1,29 @@
+.card_design {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 50px;
+}
+
+
+.card_avatar {
+    // position: absolute;
+    // right: 16px;
+    // top: -20px;
+    width: 40px;
+}
+
+.bike_details {
+  display: flex;
+}
+
+.bike_info {
+  float: left;
+}
+.price_avatar {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
