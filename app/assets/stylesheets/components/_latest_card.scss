@@ -1,6 +1,9 @@
 .latest_card {
   margin: 3vh;
   margin-top: -7vh;
+  flex: 3;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .listing_header {
