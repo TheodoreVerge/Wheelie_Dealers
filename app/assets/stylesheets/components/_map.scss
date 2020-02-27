@@ -1,8 +1,24 @@
-.mapboxgl-popup {
-  max-width: 200px;
+// .mapboxgl-popup {
+//   max-width: 200px;
+// }
+
+// .mapboxgl-popup-content {
+//   text-align: center;
+//   font-family: 'Quicksand', sans-serif;
+// }
+
+#map {
+  // display: flex;
+  height: 100%;
+  width: 50%;
+  // width: 30%;
+  // display: inline-block;
 }
 
-.mapboxgl-popup-content {
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
+.outer_container {
+  height: 100vh;
+}
+
+.left_hand {
+  width: 50%;
 }
