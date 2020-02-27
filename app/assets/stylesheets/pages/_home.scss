@@ -1,14 +1,18 @@
 // Specific CSS for your home-page
 .background_img {
-  background-image: url('background.jpg');
+  // background-image: url('background.jpg');
   background-color: #cccccc;
-  height: 105vh;
+  height: 100vh;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  transform: translateY(-85px);
+  transform: translateY(-60px);
+}
+
+.background_img > h1 {
+  padding-top: 200px;
 }
 
 .main-header {
@@ -16,24 +20,25 @@
   text-align: center;
   color: $orange;
   letter-spacing: 5px;
-  position: absolute;
-  top:29vh;
-  left: 80vh;
+  // position: absolute;
+  // top:29vh;
+  // left: 80vh;
 }
 
 
+
 .form{
-  width:51vh;
-  height:44vh;
+  // width:51vh;
+  // height:44vh;
   background-color: white;
   border-radius:8px;
   box-shadow:0 0 40px -10px #000;
   margin: 130px auto;
-  padding:20px 30px;
+  padding:20px 30px 30px;
   box-sizing: border-box;
   position: absolute;
-  left: 7vh;
-  top: 3vh  ;
+  left: 55.23px;
+  top: 23.67px ;
   // opacity: 0.8;
   }
 
@@ -42,16 +47,39 @@
   .submit_button {
     background-color: $orange;
     letter-spacing: 2px;
+    color: white;
+    font-weight: bold;
+  }
 
+  .submit_button:hover {
+    color: $orange;
+    text-decoration: none;
+    background-color: white;
+  }
+
+  .form h3 {
+    text-align: center;
+    margin: 10px;
   }
 
   .sell_bike {
-    position: absolute;
-    bottom: 30vh;
-    left: 9vh;
-    width: 48vh;
-    border-radius: 10px;
+    // position: absolute;
+    // bottom: 30vh;
+    // left: 9vh;
+    // width: 48vh;
+    // border-radius: 10px;
     // opacity: 0.8;
+    background-color: $blue;
+    opacity: 0.5;
+    // padding: 12px 32px;
+    color: white;
+    transition: 0.5s ease;
+    // margin-left: 48px;
+  }
+
+  .sell_bike:hover {
+    color: $blue;
+    text-decoration: none;
     background-color: white;
   }
 // h2{margin:10px 0;padding-bottom:10px;width:180px;color:#78788c;border-bottom:3px solid #78788c}
