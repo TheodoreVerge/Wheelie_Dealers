@@ -1,9 +1,14 @@
-<div class = ></div>
-<h1>Transaction Confirmation Page</h1>
-<br>
-<br>
-<h2> Buyer - <%= @transaction.user.email %> <%= cl_image_tag @transaction.user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%></h2>
-<br>
-<h2> Seller - <%= @transaction.bike.user.email %> <%= cl_image_tag @transaction.bike.user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%></h2>
-<br>
-<h2> <%= @transaction.bike.title %> | <%= @transaction.bike.description %> | <%= @transaction.bike.price %></p>
+<div class="container">
+  <div>
+    <h1>Transaction Confirmation Page</h1>
+  </div>
+  <div>
+    <h3 class="d-flex"> <%= cl_image_tag @transaction.user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%> Buyer - <%= @transaction.user.email %> </h2>
+  </div>
+  <div>
+  <h3 class="d-flex"> <%= cl_image_tag @transaction.bike.user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%> Seller - <%= @transaction.bike.user.email %> </h2>
+  </div>
+  <div>
+    <h2> <%= @transaction.bike.title %> | <%= @transaction.bike.description %> | <%= @transaction.bike.price %></p>
+  </div>
+</div>
