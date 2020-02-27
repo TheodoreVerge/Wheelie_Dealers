@@ -1,7 +1,6 @@
 class BikesController < ApplicationController
 
   def index
-    # @bikes = Bike.all
     @bikes = Bike.geocoded
 
     @markers = @bikes.map do |bike|
@@ -40,6 +39,6 @@ class BikesController < ApplicationController
    private
 
   def bike_params
-    params.require(:bike).permit(:title, :price, :description, :brand, photos: [])
+    params.require(:bike).permit(:title, :price, :description, :brand, :address, photos: [])
   end
 end
