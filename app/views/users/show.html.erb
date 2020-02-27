@@ -2,13 +2,14 @@
 <div class="card-product col-6">
 
         <% if user_signed_in? && current_user.photo.attached? %>
-          <%= cl_image_tag current_user.photo.key, height: 300, width: 300, crop: :fill, class: "img-style" %>
+          <%= cl_image_tag current_user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%>
       <% end %>
 
-  <%#= cl_image_tag current_user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%>
+
 <div class="card-product-infos">
-    <h1>Your Profile Page</h1>
-    <h2><%= current_user.first_name %> - <%= current_user.last_name %></h2>
+    <h1>Your Profile Page!</h1>
+    <h2><%= current_user.first_name %><%= current_user.last_name %></h2>
     <p><%= current_user.email %></p>
+    <p><%= current_user.postcode %></p>
   </div>
-</div> -->
+</div>
