@@ -1,22 +1,54 @@
 <div class="container">
-  <div class="d-flex justify-content-between pt-5" style="height:520px">
-    <div>
-      <p class="d-flex col-md-4 align-items-center flex-column"> <%= cl_image_tag @transaction.user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%> Buyer - <%= @transaction.user.email %> </p>
-    </div>
-    <div class="d-flex col-md-4 align-items-center text-center flex-column">
-      <h4 class="align-items-end">
-        <h4>*relevant bike card*</h4>
-        <%= @transaction.bike.title %>
-        <br>
-        <%= @transaction.bike.description %>
-        <br>
-        <%= @transaction.bike.price %>
-      </h4>
-        <button type="button" class="btn btn-primary">Confirm Purchase</button>
-    </div>
+  <h3 class="text-center pt-3">Transaction confirmation!</h3>
+  <div class="d-flex row justify-content-between pt-5" style="height:500px">
+
+
+
+<!-- SELLER INFO -->
+
 
     <div>
-       <p class="d-flex col-md-4 align-items-center flex-column"> <%= cl_image_tag @transaction.bike.user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%> Seller - <%= @transaction.bike.user.email %> </p>
+      <p class="d-flex align-items-center flex-column"> <%= cl_image_tag @transaction.user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%> Buyer - <%= @transaction.user.email %> </p>
+    </div>
+
+
+<!-- BIKE CARD -->
+
+ <div class="card mb-6 col-md-6 card_design">
+    <div class="row no-gutters">
+      <% if @transaction.bike.photos.any? %>
+      <%= cl_image_tag @transaction.bike.photos.first.key, class: "card-img col-md-4"%>
+      <% end %>
+      <div class="col-8 bike_details d-flex p-3 card-body">
+        <div class=" bike_info flex-grow">
+          <h5 class="card-title"><%= @transaction.bike.title %></h5>
+          <p class="card-text"><%= @transaction.bike.description %></p>
+          <p> <% if current_user.id == @transaction.bike.user_id %>
+              <%= link_to bike_path(@transaction.bike), method: :delete, data: { confirm: "Are you sure?" } do %>
+              <i class="fa fa-trash destroy_dose"> - Delete this bike listing</i> </p>
+              <% end %>
+            <% end %>
+        </div>
+        <div class="price_avatar d-flex align-items-end">
+          <%= image_tag "avatar.png", :class => "card_avatar ", alt: "alttext" %>
+          <h3 class="card-trip-pricing"> £<%=@transaction.bike.price %></h3>
+        </div>
+      </div>
     </div>
   </div>
+
+
+
+
+
+
+<!-- BUYER INFO -->
+
+    <div>
+       <p class="d-flex align-items-center flex-column"> <%= cl_image_tag @transaction.bike.user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%> Seller - <%= @transaction.bike.user.email %> </p>
+    </div>
+
+
+  </div>
 </div>
+
