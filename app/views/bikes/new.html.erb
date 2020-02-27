@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+<h1>List your bike!</h1>
+<div class="basic_form">
+  <%= simple_form_for(@bike) do |f|%>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :brand %>
+  <%= f.input :address %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true }%>
+  <%= f.submit "List it!", class: "btn btn-primary" %>
+  <% end %>
+
+</div>
+=======
 <div class="body_form">
   <div class="basic_form">
     <h1>List your bike!</h1>
@@ -10,3 +25,4 @@
       <%= f.submit "List it!", class: "btn btn-block submit_button" %>
       <% end %>
   </div>
+>>>>>>> master
