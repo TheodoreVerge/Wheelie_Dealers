@@ -1,7 +1,7 @@
 <!-- <div class="container"> -->
-    <div class="row justify-content-left">
+    <div class="all-form row justify-content-left">
       <div class="form">
-        <h1 style="font-family: 'Vibur';">Search for bikes</h1>
+        <h1>Search for bikes</h1>
         <!-- <div class="col-md-4"> -->
 
         <%= simple_form_for :bikes, url: bikes_path, method: :get  do |f| %>
@@ -10,8 +10,10 @@
           <%= f.input :brand, placeholder: "Brand", label: false; %>
           <%= f.button :submit, "Find your bike!", class: 'btn btn-block submit_button' %>
         <% end %>
+        <!-- <h3>or..</h3> -->
+        <hr style="">
       <!-- </div> -->
+    <%= link_to "Sell your bike!", new_bike_path, class:"btn btn-block sell_bike" %>
     </div>
-    <%= link_to "Sell your bike!", new_bike_path, class:"btn active sell_bike" %>
 </div>
 <!-- <script src="https://cdn.jsdelivr.net/npm/places.js@1.18.1"></script> -->
