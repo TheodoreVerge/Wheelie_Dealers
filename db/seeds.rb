@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 puts "Cleaning db"
 p "."
 p ".."
@@ -12,12 +13,15 @@ p "..."
 User.destroy_all
 
 puts "Creating users"
-user = User.create!(password: "123123", email: "test1@gmail.com")
+user1 = User.create!(first_name: "Kenny", last_name: "Rogers", postcode: "N18", password: "123123", email: "test1@gmail.com")
+user2 = User.create!(first_name: "Roger", last_name: "Rabbit", postcode: "SW5", password: "123123", email: "test2@gmail.com")
 
 puts "Creating bikes"
-bike1 = Bike.create!(title: "Fixie", user: user, price: 200, description: "Sweet fixie, blue", brand: "Peugeot")
-bike2 = Bike.create!(title: "Kids", user: user, price: 50, description: "Red kids bike", brand: "Schwinn")
 
-# puts "Creating reviews"
-# review1 = Review.create!(user: user, bike: bike1, content: "Great bike")
-# review2 = Review.create!(user: user, bike: bike2, content: "Greater bike")
+bike1 = Bike.create!(title: "Scott Bike - Good shape", user: user1, price: 800, description: "Moutain Bike - 54 cm frame", brand: "Scott")
+
+
+bike2 = Bike.create!(title: "Tandem Bike - Perfect for leisure", user: user2, price: 350, description: "Red tandem bike - signs of use visible", brand: "Schwinn")
+
+puts "Done!"
+
