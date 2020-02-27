@@ -1,4 +1,3 @@
-
 <div class="container">
   <div id="map"
        style="width: 100%;
@@ -6,7 +5,6 @@
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-
 <% @bikes.each do |bike| %>
 <div class="card mb-6 col-md-6 card_design">
   <div class="row no-gutters">
@@ -22,10 +20,8 @@
       <div class="price_avatar d-flex align-items-end">
         <%= image_tag "avatar.png", :class => "card_avatar ", alt: "alttext" %>
         <h3 class="card-trip-pricing"> £<%=bike.price %></h3>
-
       </div>
     </div>
   </div>
 </div>
 <% end %>
-
