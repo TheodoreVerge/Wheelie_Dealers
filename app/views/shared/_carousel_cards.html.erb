@@ -6,10 +6,10 @@
       <% if bike.photos.any? %>
       <%= cl_image_tag bike.photos.first.key, class: "card-img"%>
       <% end %>
-      <div class="card-body">
+      <div class="card-body text-center">
         <h5 class="card-title"><%= bike.title %></h5>
         <p class="card-text"><%= bike.description %></p>
-        <p class="card-text"><small class="text-muted"><%= link_to "Find out more!", bike_path(bike) %></small></p>
+        <p class="card-text"><small class="text-muted"><%= link_to "Find out more!", bike_path(bike), :id => "link-style" %></small></p>
       </div>
     </div>
   </div>
