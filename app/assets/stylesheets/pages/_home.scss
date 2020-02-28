@@ -63,26 +63,44 @@
   }
 
   .sell_bike {
-    // position: absolute;
-    // bottom: 30vh;
-    // left: 9vh;
-    // width: 48vh;
-    // border-radius: 10px;
-    // opacity: 0.8;
     background-color: $blue;
     opacity: 0.5;
-    // padding: 12px 32px;
     color: white;
     transition: 0.5s ease;
-    // margin-left: 48px;
   }
 
   .sell_bike:hover {
-    color: $blue;
+    color: black;
     text-decoration: none;
-    background-color: white;
   }
 
 .wrap {
   flex-wrap: wrap;
+}
+
+.form-style {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 28px;
+}
+
+.home-button {
+  width: 100%;
+  margin-top: 28px;
+  background-color: $orange;
+  padding: 6px;
+}
+
+.home-button:hover {
+  color: white;
+
+}
+
+#query {
+  padding: 8px;
+}
+
+#link-style {
+  color: orange;
 }

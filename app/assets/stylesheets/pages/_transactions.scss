@@ -1,4 +1,4 @@
- .submit_button {
+ .submit-button {
     background-color: $orange;
     letter-spacing: 2px;
     color: white;
@@ -6,7 +6,7 @@
     width: 200px;
   }
 
-  .submit_button:hover {
+  .submit-button:hover {
     color: $orange;
     text-decoration: none;
     background-color: white;
@@ -20,8 +20,19 @@
     color: $orange;
   }
 
+#pop-up-button {
+  background-color: $orange;
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+#pop-up-font {
+  font-size: 18px;
+}
+
 @media (min-width: 1200px) {
-  .container-width {
-    width: 100vw;
+  #container-width {
+    width: 100vw !important;
   }
 }

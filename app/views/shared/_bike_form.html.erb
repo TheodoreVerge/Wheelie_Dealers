@@ -2,18 +2,17 @@
     <div class="all-form row justify-content-left">
       <div class="form">
         <h1>Search for bikes</h1>
-        <!-- <div class="col-md-4"> -->
-
-        <%= simple_form_for :bikes, url: bikes_path, method: :get  do |f| %>
-          <%= f.input :postcode, placeholder: "Type your postcode", label: false;%>
-          <%= f.input :price, placeholder: "Price", label: false; %>
-          <%= f.input :brand, placeholder: "Brand", label: false; %>
-          <%= f.button :submit, "Find your bike!", class: 'btn btn-block submit_button' %>
-        <% end %>
-        <!-- <h3>or..</h3> -->
+          <%= form_tag bikes_path, method: :get, id: :search_form do %>
+            <%= text_field_tag :query, params[:query], class: "form-style", placeholder: "Search by address or price" %>
+            <%#= text_field_tag :query, params[:query], placeholder: "Price" %>
+            <%= submit_tag "Find a bike", class: "home-button" %>
+          <% end %>
         <hr style="">
-      <!-- </div> -->
-    <%= link_to "Sell your bike!", new_bike_path, class:"btn btn-block sell_bike" %>
+        <%= link_to "Sell your bike!", new_bike_path, class:"btn btn-block sell_bike" %>
     </div>
 </div>
-<!-- <script src="https://cdn.jsdelivr.net/npm/places.js@1.18.1"></script> -->
+
+
+        <%#= simple_form_for :bikes, url: bikes_path, method: :get  do |f| %>
+          <%#= f.input text_field_tag :query, params[:query]%>
+          <%#= f.button :submit, "Find your bike!", class: 'btn btn-block submit_button' %>

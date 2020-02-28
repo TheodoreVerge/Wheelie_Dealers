@@ -1,9 +1,12 @@
 class BikesController < ApplicationController
 
  def index
-    @bikes = Bike.geocoded.where.not(user: current_user)
-
-    @markers = @bikes.map do |bike|
+    if params[:query].blank?
+      @bikes = Bike.all
+    else
+      @bikes = Bike.search_by_address_and_price(params[:query])
+    end
+    @markers = @bikes.geocoded.map do |bike|
       {
         lat: bike.latitude,
         lng: bike.longitude,
