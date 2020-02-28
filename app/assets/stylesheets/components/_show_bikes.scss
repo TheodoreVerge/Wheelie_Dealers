@@ -22,15 +22,16 @@
   // margin:30px;
 }
 
+ .submit-button {
+    background-color: $orange;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+  }
 
-.card-style:hover {
-  transform: scale(1.05);
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
-}
-
-.link_color {
-  background-color: $orange;
-  color: white;
-  padding: 8px;
-  border-radius: 5px;
-}
+  .submit-button:hover {
+    color: $orange;
+    text-decoration: none;
+    background-color: white;
+  }
