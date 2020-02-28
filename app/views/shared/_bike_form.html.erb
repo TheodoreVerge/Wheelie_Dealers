@@ -3,19 +3,16 @@
       <div class="form">
         <h1>Search for bikes</h1>
           <%= form_tag bikes_path, method: :get, id: :search_form do %>
-          <%= text_field_tag :query,
-          params[:query],
-          placeholder: "Address" %>
-          <%= text_field_tag :query,
-          params[:query],
-          placeholder: "Price" %>
-          <%#= f.button :submit, "Find your bike!", class: 'btn btn-block submit_button' %>
-        <% end %>
+            <%= text_field_tag :query, params[:query], placeholder: "Address" %>
+            <%#= text_field_tag :query, params[:query], placeholder: "Price" %>
+            <%= submit_tag "Find a bike" %>
+          <% end %>
         <hr style="">
-    <%= link_to "Sell your bike!", new_bike_path, class:"btn btn-block sell_bike" %>
+        <%= link_to "Sell your bike!", new_bike_path, class:"btn btn-block sell_bike" %>
     </div>
 </div>
 
 
         <%#= simple_form_for :bikes, url: bikes_path, method: :get  do |f| %>
           <%#= f.input text_field_tag :query, params[:query]%>
+          <%#= f.button :submit, "Find your bike!", class: 'btn btn-block submit_button' %>
