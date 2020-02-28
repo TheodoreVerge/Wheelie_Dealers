@@ -1,7 +1,5 @@
 import mapboxgl from 'mapbox-gl';
 
-
-
 const initMapbox = () => {
   const fitMapToMarkers = (map, markers) => {
     const bounds = new mapboxgl.LngLatBounds();

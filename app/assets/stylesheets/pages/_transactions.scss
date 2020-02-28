@@ -20,6 +20,17 @@
     color: $orange;
   }
 
+#pop-up-button {
+  background-color: $orange;
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+#pop-up-font {
+  font-size: 18px;
+}
+
 @media (min-width: 1200px) {
   #container-width {
     width: 100vw !important;
