@@ -1,32 +1,38 @@
 
   <!--   Bike Card  -->
 
-  <div class="card mb-6 col-md-6 card_design">
-    <div class="row no-gutters">
-      <% if @bike.photos.any? %>
-      <%= cl_image_tag @bike.photos.first.key, class: "card-img col-md-4"%>
-      <% end %>
-      <div class="col-8 bike_details d-flex p-3 card-body">
-        <div class=" bike_info flex-grow">
-          <h5 class="card-title"><%= @bike.title %></h5>
+ <div class="container-fluid">
+   <div class="row">
+    <div class="col-6 mt-5 text-center">
+      <div class="card rounded mb-3">
+        <h5 class="card-header"><%= @bike.title %></h5>
+        <% if @bike.photos.any? %>
+        <%= cl_image_tag @bike.photos.first.key, class: "card-img-top card-resizing" %>
+        <% end %>
+        <div class="card-body">
+          <p class="card-text"><%= @bike.address %></p>
           <p class="card-text"><%= @bike.description %></p>
-          <p> <% if current_user.id == @bike.user_id %>
-              <%= link_to bike_path(@bike), method: :delete, data: { confirm: "Are you sure?" } do %>
-              <i class="fa fa-trash destroy_dose"> - Delete this bike listing</i> </p>
-              <% end %>
-            <% end %>
+          <h2 class="card-text"> £<%=@bike.price %></h2>
+
         </div>
-        <div class="price_avatar d-flex align-items-end">
-          <%= image_tag "avatar.png", :class => "card_avatar ", alt: "alttext" %>
-          <h3 class="card-trip-pricing"> £<%=@bike.price %></h3>
+        <div class="d-flex justify-content-center">
+          <p class= "mb-6 col-md-6"> <%= link_to "Return to bike list", bikes_path, class:"btn link_color" %>
+          <%= link_to "Buy this bike", bike_transactions_path(@bike), method: :post, class:"btn link_color" %></p>
         </div>
+      </div>
+  </div>
+    <div class="col-6">
+      <div id="map"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
     </div>
   </div>
+</div>
+
 
 <!--   Link buttons  -->
 
-  <p class= "mb-6 col-md-6"> <%= link_to "Return to bike list", bikes_path, class:"btn btn-primary" %>
-  <%= link_to "Buy this bike", bike_transactions_path(@bike), method: :post, class:"btn btn-primary" %></p>
+
 
 
