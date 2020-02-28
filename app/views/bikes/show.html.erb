@@ -1,24 +1,30 @@
 
   <!--   Bike Card  -->
 
- <div class="container-fluid">
+<div class="container-fluid">
    <div class="row">
-    <div class="col-6 mt-5 text-center">
+    <div class="col-6 mt-5">
       <div class="card rounded mb-3">
-        <h5 class="card-header"><%= @bike.title %></h5>
-        <% if @bike.photos.any? %>
-        <%= cl_image_tag @bike.photos.first.key, class: "card-img-top card-resizing" %>
-        <% end %>
-        <div class="card-body">
-          <p class="card-text"><%= @bike.address %></p>
-          <p class="card-text"><%= @bike.description %></p>
-          <h2 class="card-text"> £<%=@bike.price %></h2>
-
+        <h2 class="card-header"><%= @bike.title %></h2>
+        <div class= "button-align">
+          <% if @bike.photos.any? %>
+          <%= cl_image_tag @bike.photos.first.key, class: "card-img-top card-resizing" %>
+          <% end %>
         </div>
-        <div class="d-flex justify-content-center">
-          <p class= "mb-6 col-md-6"> <%= link_to "Return to bike list", bikes_path, class:"btn link_color" %>
-          <%= link_to "Buy this bike", bike_transactions_path(@bike), method: :post, class:"btn link_color" %></p>
+        <div class="card-body card-position">
+          <div>
+            <h4 class="card-text"><%= @bike.address %></h4>
+            <p class="card-text"><%= @bike.description %></p>
+          </div>
+          <div>
+            <h2 class="card-text"> £<%=@bike.price %></h2>
+          </div>
         </div>
+          <div class="d-flex justify-content-center">
+            <p class= "mb-6 col-md-6 button-width">  <%= link_to "Buy this bike", bike_transactions_path(@bike), method: :post, class:"btn link_color", style:"
+    margin-right: 8px;"%><%= link_to "Return to bike list", bikes_path, class:"btn link_color" %>
+           </p>
+          </div>
       </div>
   </div>
     <div class="col-6">
