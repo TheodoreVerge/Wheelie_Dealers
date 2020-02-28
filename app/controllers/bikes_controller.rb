@@ -1,7 +1,7 @@
 class BikesController < ApplicationController
 
  def index
-    @bikes = Bike.geocoded
+    @bikes = Bike.geocoded.where.not(user: current_user)
 
     @markers = @bikes.map do |bike|
       {
@@ -24,11 +24,11 @@ class BikesController < ApplicationController
     @user = current_user.id
     @bike = Bike.create(bike_params)
     @bike.user_id = @user
-      if @bike.save
-        redirect_to bike_path(@bike)
-      else
-        render :new
-      end
+    if @bike.save
+      redirect_to bike_path(@bike)
+    else
+      render :new
+    end
   end
 
   def destroy
