@@ -12,10 +12,11 @@ const initMapbox = () => {
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'map',
+      center: [0, 0],
       style: 'mapbox://styles/stewartac/ck73wbflb215a1jmxecil0br9'
       });
     const markers = JSON.parse(mapElement.dataset.markers);
-      markers.forEach((marker) => {
+    markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
       new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
@@ -24,6 +25,6 @@ const initMapbox = () => {
     });
     fitMapToMarkers(map, markers);
   }
-  };
+};
 
 export { initMapbox };
