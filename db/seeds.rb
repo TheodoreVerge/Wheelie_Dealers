@@ -10,7 +10,7 @@ puts "Cleaning db"
 p "."
 p ".."
 p "..."
-User.destroy_all
+# User.destroy_all
 
 puts "Creating users"
 user1 = User.create!(first_name: "Kenny", last_name: "Rogers", postcode: "N18", password: "123123", email: "test1@gmail.com")
