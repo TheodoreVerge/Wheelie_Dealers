@@ -1,123 +1,19 @@
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-     <!-- PLACEMENT OF CARDS html -->
-     <div class="card-deck">
-  <div class="card col-4">
-    <%= image_tag "b.jpg", :class => "card-img-top" %>
-    <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card col-4">
-    <%= image_tag "a.jpg", :class => "card-img-top" %>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+<div class="d-flex wrap" style= "justify-content: space-between; margin: 24px;">
+  <% @bikes = Bike.all %>
+  <% @bikes.each do |bike| %>
+  <div class="card-deck col-md-3" style= "margin-top: 24px;">
+    <div class="card">
+      <% if bike.photos.any? %>
+      <%= cl_image_tag bike.photos.first.key, class: "card-img"%>
+      <% end %>
+      <div class="card-body">
+        <h5 class="card-title"><%= bike.title %></h5>
+        <p class="card-text"><%= bike.description %></p>
+        <p class="card-text"><small class="text-muted"><%= link_to "Find out more!", bike_path(bike) %></small></p>
+      </div>
     </div>
   </div>
-  <div class="card col-4">
-    <%= image_tag "c.jpg", :class => "card-img-top" %>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
+  <% end %>
 </div>
 
-    </div>
-    <div class="carousel-item">
-      <!-- PLACEMENT OF CARDS html -->
-      <div class="card-deck">
-  <div class="card col-4">
-    <%= image_tag "b.jpg", :class => "card-img-top" %>
-    <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card col-4">
-    <%= image_tag "a.jpg", :class => "card-img-top" %>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card col-4">
-    <%= image_tag "c.jpg", :class => "card-img-top" %>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-</div>
 
-    </div>
-    <div class="carousel-item">
-     <!-- PLACEMENT OF CARDS html -->
-     <div class="card-deck">
-  <div class="card col-4">
-    <%= image_tag "b.jpg", :class => "card-img-top" %>
-    <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card col-4">
-    <%= image_tag "a.jpg", :class => "card-img-top" %>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card col-4">
-    <%= image_tag "c.jpg", :class => "card-img-top" %>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-</div>
-
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>

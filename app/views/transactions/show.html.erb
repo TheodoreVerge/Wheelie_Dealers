@@ -1,9 +1,62 @@
-<div class = ></div>
-<h1>Transaction Confirmation Page</h1>
-<br>
-<br>
-<h2> Buyer - <%= @transaction.user.email %> <%= cl_image_tag @transaction.user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%></h2>
-<br>
-<h2> Seller - <%= @transaction.bike.user.email %> <%= cl_image_tag @transaction.bike.user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%></h2>
-<br>
-<h2> <%= @transaction.bike.title %> | <%= @transaction.bike.description %> | <%= @transaction.bike.price %></p>
+<div class="container container-width">
+  <h3 class="text-center pt-3">Order confirmed!</h3>
+
+  <div class="d-inline-flex flex-row justify-content-around" >
+
+<!-- SELLER INFO -->
+
+
+    <div>
+      <p class="d-flex flex-column align-items-center"> <%= cl_image_tag @transaction.user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%> <b>Buyer</b> <%= @transaction.user.email %> </p>
+    </div>
+
+
+<!-- BIKE CARD -->
+
+<div class="d-flex flex-column align-items-center p-3">
+  <p>Your order reference ID is: # <%= @transaction.id %> </p>
+  <p>A receipt of this transaction has been sent to <%= @transaction.user.email %> </p>
+  <% if @transaction.bike.photos.any? %>
+  <%= cl_image_tag @transaction.bike.photos.first.key, class: "col-sm-5 align-items-center"%>
+  <% end %>
+    <div class="d-flex text-center p-3">
+      <h5 class="card-title"> Here's your new item!</h5>
+    </div>
+    <div>
+       <h5> <%= @transaction.bike.title %> </h5>
+    </div>
+      <p>
+        <% if current_user.id == @transaction.bike.user_id %>
+        <%= link_to bike_path(@transaction.bike), method: :delete, data: { confirm: "Are you sure?" } do %>
+      </p>
+        <% end %>
+        <% end %>
+      <div>
+        <p class="text-center"> Total price: £<%=@transaction.bike.price %></>
+      </div>
+
+    <!--   <button> class="submit_button">
+        <%= link_to "Back to bike list", bikes_path %>
+      </button> -->
+      <div class="btn btn btn-block submit_button">
+        <%= link_to "Back to all bikes", bikes_path %>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+<!-- BUYER INFO -->
+
+    <div>
+       <p class="d-flex flex-column align-items-center"> <%= cl_image_tag @transaction.bike.user.photo.key, gravity: :face, crop: :thumb, class: "avatar-large"%> <b>Seller</b> <%= @transaction.bike.user.email %> </p>
+    </div>
+
+
+  </div>
+</div>
+

@@ -1,0 +1,27 @@
+ .submit_button {
+    background-color: $orange;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+  }
+
+  .submit_button:hover {
+    color: $orange;
+    text-decoration: none;
+    background-color: white;
+  }
+
+  a {
+    color: white;
+  }
+
+  a:hover {
+    color: $orange;
+  }
+
+@media (min-width: 1200px) {
+  .container-width {
+    width: 100vw;
+  }
+}
